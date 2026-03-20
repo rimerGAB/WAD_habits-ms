@@ -21,9 +21,19 @@ A simple Laravel application to track daily habits.
 - ✅ Create, Read, Update, Delete habits
 - ✅ Track habit status
 - ✅ Set target dates
-
-![Habit Tracker Dashboard](screenshot/CREATE.jpg)
-
+_________________________________________________
+CREATE:
+![CREATE](screenshot/CREATE.jpg)
+_________________________________________________
+CREATE:
+![READ](screenshot/READ.jpg)
+_________________________________________________
+CREATE:
+![UPDATE](screenshot/UPDATE.jpg)
+_________________________________________________
+CREATE:
+![DELETE](screenshot/DELETE.jpg)
+________________________________________________
 ## Quick Start
 
 ```bash
