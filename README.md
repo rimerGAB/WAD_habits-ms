@@ -21,8 +21,7 @@ A simple Laravel application to track daily habits.
 - ✅ Create, Read, Update, Delete habits
 - ✅ Track habit status
 - ✅ Set target dates
-- ✅ Bootstrap 5 styling
-- ✅ Pagination
+
 
 ## Quick Start
 
