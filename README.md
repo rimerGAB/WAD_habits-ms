@@ -25,13 +25,13 @@ _________________________________________________
 CREATE:
 ![CREATE](screenshot/CREATE.jpg)
 _________________________________________________
-CREATE:
+READ:
 ![READ](screenshot/READ.jpg)
 _________________________________________________
-CREATE:
+UPDATE:
 ![UPDATE](screenshot/UPDATE.jpg)
 _________________________________________________
-CREATE:
+DELETE:
 ![DELETE](screenshot/DELETE.jpg)
 ________________________________________________
 ## Quick Start
