@@ -22,6 +22,7 @@ A simple Laravel application to track daily habits.
 - ✅ Track habit status
 - ✅ Set target dates
 
+![Habit Tracker Dashboard](screenshot/CREATE.jpg)
 
 ## Quick Start
 
