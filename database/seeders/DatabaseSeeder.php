@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Habits;
 use App\Models\User;
-use App\Models\Student;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -16,13 +16,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        Student::factory(200)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+      
+        Habits::factory(20)->specificHabits()->create();
+        
+        $this->command->info('✓ Created 20 specific habits successfully!');
+      
     }
 }

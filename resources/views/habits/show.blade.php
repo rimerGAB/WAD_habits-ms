@@ -12,44 +12,44 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        <h3>Student Details</h3>
+                        <h3>Habit Details</h3>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered">
                             <tr>
-                                <th width="200">Student ID</th>
-                                <td>{{ $student->student_id }}</td>
+                                <th width="200">Title</th>
+                                <td>{{ $habit->title }}</td>
                             </tr>
                             <tr>
-                                <th>Name</th>
-                                <td>{{ $student->name }}</td>
+                                <th>Description</th>
+                                <td>{{ $habit->description }}</td>
                             </tr>
                             <tr>
-                                <th>Course</th>
-                                <td>{{ $student->course }}</td>
+                                <th>Status</th>
+                                <td>{{ $habit->status }}</td>
                             </tr>
                             <tr>
-                                <th>Year</th>
-                                <td>{{ $student->year }}</td>
+                                <th>Target Date</th>
+                                <td>{{ $habit->target_date }}</td>
                             </tr>
                             <tr>
                                 <th>Created At</th>
-                                <td>{{ $student->created_at->format('M d, Y h:i A') }}</td>
+                                <td>{{ $habit->created_at->format('M d, Y h:i A') }}</td>
                             </tr>
                             <tr>
                                 <th>Updated At</th>
-                                <td>{{ $student->updated_at->format('M d, Y h:i A') }}</td>
+                                <td>{{ $habit->updated_at->format('M d, Y h:i A') }}</td>
                             </tr>
                         </table>
 
                         <div class="d-flex justify-content-between mt-3">
-                            <a href="{{ route('students.index') }}" class="btn btn-secondary">Back to List</a>
+                            <a href="{{ route('habits.index') }}" class="btn btn-secondary">Back to List</a>
                             <div>
-                                <a href="{{ route('students.edit', $student->id) }}" class="btn btn-warning">Edit</a>
-                                <form action="{{ route('students.destroy', $student->id) }}" method="POST" class="d-inline">
+                                <a href="{{ route('habits.edit', $habit->id) }}" class="btn btn-warning">Edit</a>
+                                <form action="{{ route('habits.destroy', $habit->id) }}" method="POST" class="d-inline">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this student?')">Delete</button>
+                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this habit?')">Delete</button>
                                 </form>
                             </div>
                         </div>

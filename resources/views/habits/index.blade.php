@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Students List</title>
+    <title>Habits List</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container mt-5">
         <div class="row mb-4">
             <div class="col">
-                <h1>Students List</h1>
+                <h1>Habits Track</h1>
             </div>
             <div class="col text-end">
-                <a href="{{ route('students.create') }}" class="btn btn-primary">Add New Student</a>
+                <a href="{{ route('habits.create') }}" class="btn btn-primary">Add New Habit</a>
             </div>
         </div>
 
@@ -29,24 +29,24 @@
                 <table class="table table-striped table-hover">
                     <thead>
                         <tr>
-                            <th>Student ID</th>
-                            <th>Name</th>
-                            <th>Course</th>
-                            <th>Year</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                            <th>Target Date</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse($students as $student)
+                        @forelse($habits as $habit)
                             <tr>
-                                <td>{{ $student->student_id }}</td>
-                                <td>{{ $student->name }}</td>
-                                <td>{{ $student->course }}</td>
-                                <td>{{ $student->year }}</td>
+                                <td>{{ $habit->title }}</td>
+                                <td>{{ $habit->description }}</td>
+                                <td>{{ $habit->status }}</td>
+                                <td>{{ $habit->target_date }}</td>
                                 <td>
-                                    <a href="{{ route('students.show', $student->id) }}" class="btn btn-sm btn-info">View</a>
-                                    <a href="{{ route('students.edit', $student->id) }}" class="btn btn-sm btn-warning">Edit</a>
-                                    <form action="{{ route('students.destroy', $student->id) }}" method="POST" class="d-inline">
+                                    <a href="{{ route('habits.show', $habit->id) }}" class="btn btn-sm btn-info">View</a>
+                                    <a href="{{ route('habits.edit', $habit->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                                    <form action="{{ route('habits.destroy', $habit->id) }}" method="POST" class="d-inline">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
@@ -55,14 +55,14 @@
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="5" class="text-center">No students found.</td>
+                                <td colspan="5" class="text-center">No habits found.</td>
                             </tr>
                         @endforelse
                     </tbody>
                 </table>
                 
                 <div class="d-flex justify-content-center mt-3">
-                    {{ $students->links('pagination::bootstrap-5') }}
+                    {{ $habits->links('pagination::bootstrap-5') }}
                 </div>
             </div>
         </div>
