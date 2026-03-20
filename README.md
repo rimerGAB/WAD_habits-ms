@@ -44,6 +44,10 @@ php artisan db:seed
 
 # Start server
 php artisan serve
+```
+
+
+REQUIREMENTS
 ____________________
 PHP ≥ 8.0
 
