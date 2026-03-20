@@ -52,33 +52,6 @@ Composer
 SQLite
 ___________________
 
-
-Or even shorter version:
-
-```markdown
-# Habit Tracker
-
-Laravel habit tracking app.
-
-## Database Fields
-- **id** - Primary key
-- **title** - Habit name
-- **description** - Details
-- **status** - pending / in_progress / done
-- **target_date** - Goal date
-- **created_at** / **updated_at** - Timestamps
-
-## Setup
-```bash
-composer install
-cp .env.example .env
-php artisan key:generate
-php artisan migrate
-php artisan db:seed
-php artisan serve
-
-
-
 ____________________________________________
 Visit http://localhost:8000/habits
 _____________________________________________
