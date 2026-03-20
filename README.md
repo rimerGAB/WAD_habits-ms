@@ -1,6 +1,6 @@
-**HABIT TRACKING SYSTEM**
+**WAD-HABITS-MS**
 --------------------------------------------
-# Habit Tracker
+# Habit Tracking System
 
 A simple Laravel application to track daily habits.
 
